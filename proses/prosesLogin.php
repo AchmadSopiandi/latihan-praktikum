@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    $query = "SELECT username, password FROM akun WHERE username = '$username' AND password = '$password'";
+    $query = "SELECT username, password FROM users WHERE username = '$username' AND password = '$password'";
     $result = mysqli_query($conn, $query);
 
     if (mysqli_num_rows($result) > 0) {

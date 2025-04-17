@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $conn->real_escape_string($_POST["username"]);
     $password = $conn->real_escape_string($_POST["password"]);
 
-    $sql = "INSERT INTO akun (nama, username, password) VALUES ('$nama', '$username', '$password')";
+    $sql = "INSERT INTO users (nama, username, password) VALUES ('$nama', '$username', '$password')";
 
     if ($conn->query($sql) === TRUE) {
         header("Location: ../login.php");
